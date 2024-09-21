@@ -1,0 +1,43 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.Digital-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+.clock {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    min-width: 50px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .Digital-clock{
+        font-size: 2rem;
+        
+    }
+    .clock{
+        margin: 0 5px;
+        padding: 8px;
+        min-width: 40px;
+    }
+}
