@@ -1,33 +1,31 @@
-const hoursElement = document.getElementById("hours");
-const minutesElement = document.getElementById("minutes");
-const secondsElement = document.getElementById("seconds");
-const ampmElement = document.getElementById("ampm");
+document.addEventListener("DOMContentLoaded", () => {
+  const hoursElement = document.getElementById("hours");
+  const minutesElement = document.getElementById("minutes");
+  const secondsElement = document.getElementById("seconds");
+  const ampmElement = document.getElementById("ampm");
 
-setInterval(function () {
-  const date = new Date();
-  let hours = date.getHours();
-  let ampm = "AM";
+  setInterval(function () {
+    const date = new Date();
+    let hours = date.getHours();
+    let ampm = "AM";
 
-  if (hours > 11) {
-    ampm = "PM";
-    if (hours > 12) {
-      hours -= 12;
+    if (hours > 11) {
+      ampm = "PM";
+      if (hours > 12) {
+        hours -= 12;
+      }
     }
-  }
 
-  // hours = hours.toString().padStart(2, "0");
-  let minutes = date.getMinutes().toString().padStart(2, "0");
-  let seconds = date.getSeconds().toString().padStart(2, "0");
+    // hours = hours.toString().padStart(2, "0");
+    let minutes = date.getMinutes().toString().padStart(2, "0");
+    let seconds = date.getSeconds().toString().padStart(2, "0");
 
-  hoursElement.innerText = hours;
-  minutesElement.innerText = minutes;
-  secondsElement.innerText = seconds;
-  ampmElement.innerText = ampm;
-}, 1000);
-
-
-
-
+    hoursElement.innerText = hours;
+    minutesElement.innerText = minutes;
+    secondsElement.innerText = seconds;
+    ampmElement.innerText = ampm;
+  }, 1000);
+});
 
 // function updateClock() {
 //   let now = new Date();
